@@ -7,15 +7,14 @@
 ## PHASE 0 — Project Scaffold, Environment & Git Foundation
 
 - [x] Initialise Next.js App Router project with TypeScript strict mode (`src/` layout, `@/*` path alias)
-- [ ] Run `git init`; create initial commit `chore: initialise Next.js project`; push to GitHub; set `main` as default branch
-- [ ] Add `.gitignore` (Next.js standard: `.next/`, `node_modules/`, `.env*`, keep `.env.example`)
-- [ ] Write `CONTRIBUTING.md` — branch naming (`feat/phase-N-<slug>`, `fix/<slug>`, `chore/<slug>`), commit convention (Conventional Commits), PR checklist, phase tag convention (`git tag v0.phase-N`)
-- [ ] Install and configure Prisma ORM; connect to Neon PostgreSQL (`DATABASE_URL` + `DIRECT_URL`)
-- [ ] Define and Zod-validate all environment variables at startup (`lib/env.ts`); write `.env.example`
-- [ ] Configure `vercel.json` with Vercel Cron schedule for daily cutoff lock (default: `0 22 * * *` UTC = midnight Cairo)
-- [ ] Configure Tailwind CSS with built-in `rtl:` / `ltr:` variants (no plugin — native since Tailwind v3); update root `layout.tsx` (`dir="rtl"`, `lang="ar"`)
-- [ ] Scaffold role-aware middleware skeleton (`middleware.ts`): JWT verification via `jose` + role gate (DEVELOPER / BAKERY_ADMIN / CUSTOMER); route `matcher` config
-- [ ] Write `lib/response.ts` global API response helpers (`success()` / `error()`) + `src/types/index.ts`
+- [x] Run `git init`; create initial commit `chore: initialise Next.js project`; push to GitHub; set `main` as default branch
+- [x] Add `.gitignore` (Next.js standard: `.next/`, `node_modules/`, `.env*`, keep `.env.example`)
+- [x] Install and configure Prisma ORM; connect to Neon PostgreSQL (`DATABASE_URL` + `DIRECT_URL`)
+- [x] Define and Zod-validate all environment variables at startup (`lib/env.ts`); write `.env.example`
+- [x] Configure `vercel.json` with Vercel Cron schedule for daily cutoff lock (default: `0 22 * * *` UTC = midnight Cairo)
+- [x] Configure Tailwind CSS with built-in `rtl:` / `ltr:` variants (no plugin — native since Tailwind v3); update root `layout.tsx` (`dir="rtl"`, `lang="ar"`)
+- [x] Scaffold role-aware middleware skeleton (`middleware.ts`): JWT verification via `jose` + role gate (DEVELOPER / BAKERY_ADMIN / CUSTOMER); route `matcher` config
+- [x] Write `lib/response.ts` global API response helpers (`success()` / `error()`) + `src/types/index.ts`
 - [ ] Configure GitHub Actions CI workflow (`.github/workflows/ci.yml`): `tsc --noEmit` + `eslint` on push to any `feat/*` / `fix/*` branch
 - [ ] Configure GitHub Actions fallback cron (`.github/workflows/cron-cutoff.yml`): calls `POST /api/cron/cutoff-lock` authenticated by `CRON_SECRET`
 - [ ] Install Husky + lint-staged + `@commitlint/cli` + `@commitlint/config-conventional` + Prettier; configure `.husky/pre-commit` (lint-staged: ESLint + Prettier on staged files) and `.husky/commit-msg` (commitlint: blocks non-conventional messages)
