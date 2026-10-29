@@ -1,0 +1,10 @@
+// Prisma schema for Mad-Bak
+// Source of truth: PRD.md & IMPLEMENTATION_PLAN.md
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
