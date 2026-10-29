@@ -1,0 +1,9 @@
+{
+  "crons": [
+    {
+      "path": "/api/cron/cutoff-lock",
+      "schedule": "0 22 * * *"
+    }
+  ]
+}
+
